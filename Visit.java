@@ -2,10 +2,10 @@ package discountsystem.core;
 
 import java.util.Date;
 /**
- * This class defines a visit of a customer at certain date.
+ * This class defines a visit of a customer at a specified date.
  * It also takes serviceExpense and productExpense as input and derives total bill for a customer.
  * 
- * @author apple
+ * @author jhaverih
  *
  */
 public class Visit{
@@ -37,6 +37,9 @@ public class Visit{
 		return productBill;
 	}
 	
+	/**
+		Computer final bill, apply discounts if any based on membership
+	*/
 	public double getFinalBill(){
 		DiscountedBill serviceDiscount = new ServiceDiscountedBill();
 		DiscountedBill productDiscount = new ProductDiscountedBill();
